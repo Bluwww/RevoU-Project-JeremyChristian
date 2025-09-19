@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="PROJECT/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 My Todo List</h1>
+        
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <input type="date" id="dueDateInput">
+            <button onclick="addTask()">➕ Add Task</button>
+        </div>
+        
+        <div class="controls">
+            <div class="filter-buttons">
+                <button class="active" onclick="filterTasks('all')">All</button>
+                <button onclick="filterTasks('pending')">Pending</button>
+                <button onclick="filterTasks('completed')">Completed</button>
+            </div>
+            <button class="delete-all-btn" onclick="deleteAllTasks()">🗑 Delete All</button>
+        </div>
+        
+        <table class="todo-table">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+                <tr>
+                    <td colspan="4" class="no-task">No tasks available. Add a new task to get started!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="PROJECT/js/script.js"></script>
+</body>
+</html>
